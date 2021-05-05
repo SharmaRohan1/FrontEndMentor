@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singlePriceGrid</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        body {
+            background-color: rgba(240,240,240,255);
+        }
+        ul{
+            list-style: none;
+        }
+        #join,#sub,#whyUs{
+            padding: 20px;
+        }
+        #whyUs ul{
+            padding-left: 0;
+        }
+        header{
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        #join .text{
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(191,223,50,255);
+        }
+        #join header{
+            color: rgba(43,179,177,255);
+        }
+        #join p{
+            color: rgba(203,205,212,255);
+        }
+        #sub section{
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .button{
+            margin: auto;
+            background-color: rgba(191,223,50,255);
+            margin-top:20px;
+            width: 75%;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.438);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #sub,#whyUs{
+            color: white;
+        }
+        li{
+            padding: 1px;
+        }
+        #join{
+            background-color: white;
+        }
+        #sub{
+            background-color: rgba(43,179,177,255);
+        }
+        #whyUs{
+            background-color: rgba(74,190,189,255);
+        }
+
+        @media (min-width: 751px) {
+            .container {
+                display: grid;
+                grid-template-areas:
+                    'join join'
+                    'sub whyUs';
+                width: 75%;
+                margin: auto;
+                margin-top: 150px;
+            }
+
+            #join {
+                grid-area: join;
+                height: 150px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            #sub {
+                grid-area: sub;
+                height: 200px;
+                border-radius: 0 0 0 10px;
+            }
+
+            #whyUs {
+                grid-area: whyUs;
+                height: 200px;
+                border-radius: 0 0 10px 0;
+            }
+
+        }
+
+        @media (max-width: 750px) {
+            .container{
+                margin: auto;
+                margin-top: 40px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+            }
+            #join{
+                border-radius: 10px 10px 0 0;
+            }
+            #whyUs{
+                border-radius: 0 0 10px 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="join">
+            <header>Join our community</header>
+            <div class="text">30-day, hassle-free money back gurantee</div>
+            <p>Gain access to our full library of tutorials along with expert code reviews.
+                Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+
+        <div id="sub">
+            <header>Monthly Subscription</header>
+            <section>$29 <span>per month</span></section>
+            <div class="text">Full access for less than $1 a day</div>
+            <div class="button">Sign Up</div>
+        </div>
+
+        <div id="whyUs">
+            <header>Why Us</header>
+            <p>
+            <ul>
+                <li>Tutorials by industry experts</li>
+                <li>Peer & expert code review</li>
+                <li>Coding exercises</li>
+                <li>Access to our GiHub repos</li>
+                <li>Community Forum</li>
+                <li>Flashcard decks</li>
+                <li>New videos every week</li>
+            </ul>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
