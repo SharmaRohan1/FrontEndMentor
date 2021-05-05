@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4CardFeature</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Open Sans', sans-serif; 
+            color: rgb(44, 43, 43);
+            
+        }
+        body{
+            background-color: rgba(255, 255, 255, 0.514);
+        }
+        .containHeader{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        header{
+            display: flex;
+            flex-direction: column;  
+            
+            width: 500px;
+            margin: 10px; 
+            margin-bottom: 25px;     
+            font-size: 25px; 
+            background-color: rgba(255, 255, 255, 0.514);   
+        }
+        header div{
+            text-align: center;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+        }
+        #box1,#box2,#box3,#box4{
+            height: 200px;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 5px 10px 50px rgb(223, 214, 214);
+        }
+        .container1,.container2,.container3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #head2{
+            font-weight: bold;
+        }
+        #head3{
+            font-size: 15px;
+        }
+        #box2{
+            margin-bottom: 20px;
+        }
+        .subhead{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .subhead,.text{
+            margin-bottom: 20px;
+        }
+        .image{
+            float:right;
+            padding: 20px;
+        }
+        #box1{
+            border-top: 5px solid aqua;
+        }
+        #box2{
+            border-top: 5px solid maroon;
+        }
+        #box3{
+            border-top: 5px solid gold;
+        }
+        #box4{
+            border-top: 5px solid blue;
+        }
+        @media (min-width: 701px) and (max-width: 920px){   
+            .main{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                'container1 container2'
+                'container3 container2';
+            }   
+            .container1,.container2,.container3{
+                display: flex;
+                flex-direction: column;
+            } 
+            .container1{
+                grid-area: container1;
+            }     
+            .container2{
+                grid-area: container2;
+            } 
+            .container3{
+                grid-area: container3;
+            }
+            #box1,#box2,#box3,#box4{
+                margin: 15px;
+            } 
+
+        }
+        @media (max-width: 700px){
+            .main{
+                display:flex;
+                flex-direction: column;
+            }
+            #box1,#box2,#box3,#box4{
+                margin: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="containHeader">
+    <header>
+        <div id="head1">Reliable,efficient delivery</div>
+        <div id="head2">Powered by technology</div>
+        <div id="head3">Our artificial intelligence powered tools use millions of project data points to ensure that your project is successful</div>
+    </header>
+    </div>
+
+    <div class="main">
+ 
+        <div class="container1">
+            <div id="box1">
+                <div class="subhead">Supervisor</div>
+                <div class="text">Monitors activity to identify project roadblocks</div>
+                <img src="file:///D:/WebD/FEndMentor/four-card-feature-section-master/images/icon-supervisor.svg" class="image">
+            </div>
+        </div>
+
+        <div class="container2">
+            <div id="box2">
+                <div class="subhead">Team Builder</div>
+                <div class="text">Scans our talent network to create the optimal team for your project</div>
+                <img src="file:///D:/WebD/FEndMentor/four-card-feature-section-master/images/icon-team-builder.svg" class="image">
+
+            </div>
+            <div id="box3">
+                <div class="subhead">Karma</div>
+                <div class="text">Regularly evaluates our talent to ensure quality</div>
+                <img src="file:///D:/WebD/FEndMentor/four-card-feature-section-master/images/icon-karma.svg" class="image">
+
+            </div>
+        </div>
+
+        <div class="container3">
+            <div id="box4">
+                <div class="subhead">Calculator</div>
+                <div class="text">Uses data from past projects to provide better delivery estimates</div>
+                <img src="file:///D:/WebD/FEndMentor/four-card-feature-section-master/images/icon-calculator.svg" class="image">
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+    
+</body>
+</html>
